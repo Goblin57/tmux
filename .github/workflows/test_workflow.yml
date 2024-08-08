@@ -6,7 +6,15 @@ jobs:
   esbmc-test:
     runs-on: ubuntu-latest
     steps:
-      - name: run-esbmc-action
+      - name: install dependencies
+        run: |
+          wget -O libevent.zip https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz
+          unzip -o libevent.zip
+          wget -O ncurses.zip https://invisible-mirror.net/archives/ncurses/ncurses-6.5.tar.gz
+          unzip -o ncurses.zip
+          ls
+      
+      - name: run esbmc action
         uses: esbmc/esbmc-action@v1
         with:
           esbmc-options: --incremental-bmc --include-file tmux.h
