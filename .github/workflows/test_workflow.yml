@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: install dependencies
         run: |
-          wget -O libevent.zip https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz
-          unzip -o libevent.zip
-          wget -O ncurses.zip https://invisible-mirror.net/archives/ncurses/ncurses-6.5.tar.gz
-          unzip -o ncurses.zip
+          wget -O libevent.tar.gz https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz
+          tar -xf libevent.tar.gz
+          wget -O ncurses.tar.gz https://invisible-mirror.net/archives/ncurses/ncurses-6.5.tar.gz
+          tar -xf ncurses.tar.gz
           ls
       
       - name: run esbmc action
