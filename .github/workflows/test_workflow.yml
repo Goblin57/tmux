@@ -15,6 +15,7 @@ jobs:
           tar -xf libevent.tar.gz
           wget -O ncurses.tar.gz https://invisible-mirror.net/archives/ncurses/ncurses-6.5.tar.gz
           tar -xf ncurses.tar.gz
+          ls
           cd libevent-2.1.12-stable
           ls
       

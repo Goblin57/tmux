@@ -1,4 +1,4 @@
-// Test with ESBMC action.
+// Test with ESBMC action
 /* $OpenBSD$ */
 
 /*
