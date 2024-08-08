@@ -12,10 +12,13 @@ jobs:
           tar -xf libevent.tar.gz
           wget -O ncurses.tar.gz https://invisible-mirror.net/archives/ncurses/ncurses-6.5.tar.gz
           tar -xf ncurses.tar.gz
+          cd libevent-2.1.12-stable
           ls
       
       - name: run esbmc action
         uses: esbmc/esbmc-action@v1
         with:
           esbmc-options: --incremental-bmc --include-file tmux.h
+      
+      - run: ls
         
