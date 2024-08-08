@@ -6,6 +6,9 @@ jobs:
   esbmc-test:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      
       - name: install dependencies
         run: |
           wget -O libevent.tar.gz https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz
