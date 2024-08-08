@@ -1,4 +1,4 @@
-name: VLC-ESBMC-Test
+name: tmux-esbmc-Test
 
 on: push
 
@@ -22,7 +22,7 @@ jobs:
       - name: run esbmc action
         uses: esbmc/esbmc-action@v2
         with:
-          esbmc-options: --incremental-bmc --include-file tmux.h
+          esbmc-options: --incremental-bmc --include-file tmux.h --include libevent-2.1.12-stable
           checkout: n
       
         
