@@ -1,0 +1,13 @@
+name: VLC-ESBMC-Test
+
+on: push
+
+jobs:
+  esbmc-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run-esbmc-action
+        uses: esbmc/esbmc-action@v1
+        with:
+          esbmc-options: --incremental-bmc --include .
+        
